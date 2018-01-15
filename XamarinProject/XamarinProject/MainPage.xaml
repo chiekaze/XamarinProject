@@ -5,9 +5,15 @@
              x:Class="XamarinProject.MainPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label x:Name="label"
+                Text="TASK LIST"
+                Font="Large"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="addTask"
+                    Text="Add"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

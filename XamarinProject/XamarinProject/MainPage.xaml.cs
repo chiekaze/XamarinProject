@@ -12,6 +12,11 @@ namespace XamarinProject
 		public MainPage()
 		{
 			InitializeComponent();
+
+            addTask.Clicked += async (sender, args) =>
+            {
+                await Navigation.PushModalAsync(new AddingTask());
+            };
 		}
 	}
 }
