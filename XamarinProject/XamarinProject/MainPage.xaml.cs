@@ -9,6 +9,8 @@ namespace XamarinProject
 {
 	public partial class MainPage : ContentPage
 	{
+        bool isChecked = false;
+
 		public MainPage()
 		{
 			InitializeComponent();
@@ -18,5 +20,21 @@ namespace XamarinProject
                 await Navigation.PushModalAsync(new AddingTask());
             };
 		}
+
+        void OnChecked(object sender, EventArgs args)
+        {
+            Button button = (Button)sender;
+            if(!isChecked)
+            {
+                button.Image = "Assets/CheckedCheckBox.png";
+                isChecked = true;
+            }
+
+            else
+            {
+                button.Image = "Assets/EmptyCheckBox.png";
+                isChecked = false;
+            }
+        }
 	}
 }
