@@ -35,8 +35,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-	</ItemGroup>
-	<ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Assets\CheckedCheckBox.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\EmptyCheckBox.png" />
   </ItemGroup>
