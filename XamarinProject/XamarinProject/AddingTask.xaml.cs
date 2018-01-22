@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinProject.Data;
 
 namespace XamarinProject
 {
@@ -18,8 +19,12 @@ namespace XamarinProject
 
             saveButton.Clicked += async (sender, args) =>
             {
-                await Navigation.PushModalAsync(new MainPage());
+                //await Navigation.PushModalAsync(new MainPage());
+
                 // TODO: Save stuffs
+                TTask task = new TTask(taskEntry.Text);
+
+                App.TaskDatabase.SaveTask(task);
             };
 
             backButton.Clicked += async (sender, args) =>
