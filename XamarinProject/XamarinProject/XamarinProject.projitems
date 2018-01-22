@@ -16,6 +16,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Data\ISQLite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Task.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\TaskDatabaseController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Token.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\TokenDatabaseController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -37,10 +42,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\CheckBoxEmptySmall.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\CheckBoxSmall.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\CheckedCheckBox.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\EmptyCheckBox.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Assets\" />
   </ItemGroup>
 </Project>

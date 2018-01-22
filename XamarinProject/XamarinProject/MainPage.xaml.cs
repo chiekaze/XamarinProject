@@ -26,13 +26,13 @@ namespace XamarinProject
             Button button = (Button)sender;
             if(!isChecked)
             {
-                button.Image = "Assets/CheckedCheckBox.png";
+                button.Image = "Assets/CheckBoxSmall.png";
                 isChecked = true;
             }
 
             else
             {
-                button.Image = "Assets/EmptyCheckBox.png";
+                button.Image = "Assets/CheckBoxEmptySmall.png";
                 isChecked = false;
             }
         }

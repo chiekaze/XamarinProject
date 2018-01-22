@@ -7,7 +7,11 @@
             <Label Text="ADD TASK"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Entry Placeholder="type here noob"
+            <Label x:Name="taskName"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="taskEntry" 
+                Placeholder="type here noob"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Button x:Name="saveButton"
