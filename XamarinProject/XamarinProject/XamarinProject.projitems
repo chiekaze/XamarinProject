@@ -37,10 +37,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\CheckBoxEmptySmall.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\CheckBoxSmall.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\CheckedCheckBox.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\EmptyCheckBox.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Assets\" />
   </ItemGroup>
 </Project>
