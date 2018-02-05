@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:XamarinProject"
              x:Class="XamarinProject.MainPage">
     <ContentPage.Content>
-        <RelativeLayout>
+        <StackLayout x:Name="layout">
             <Label x:Name="label"
                 Text="TASK LIST"
                 Font="Large"
@@ -18,16 +18,7 @@
                     HorizontalOptions="Center"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
             Property=Height,Factor=.20,Constant=0}"/>
-            <Button x:Name="Checkbox" 
-                    Image="Assets/CheckBoxEmptySmall.png"  
-                    HorizontalOptions="Start" 
-                    Clicked="OnChecked" 
-                    WidthRequest="70" 
-                    HeightRequest="65" 
-                    BorderColor="Transparent" 
-                    BackgroundColor="Transparent"
-                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-            Property=Height,Factor=.25,Constant=0}"/>
-        </RelativeLayout>
+
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

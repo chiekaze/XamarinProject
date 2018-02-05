@@ -17,16 +17,22 @@ namespace XamarinProject
 		{
 			InitializeComponent ();
 
+            // Creates new task, saves it in the database and returns to main screen
             saveButton.Clicked += async (sender, args) =>
-            {
-                //await Navigation.PushModalAsync(new MainPage());
-
-                // TODO: Save stuffs
-                TTask task = new TTask(taskEntry.Text);
-
-                App.TaskDatabase.SaveTask(task);
+            {  
+                if(taskEntry.Text == null)
+                {
+                    return;
+                }
+                else
+                {
+                    TTask task = new TTask(taskEntry.Text);
+                    App.TaskDatabase.SaveTask(task);
+                    await Navigation.PushModalAsync(new MainPage());
+                }
             };
 
+            // Returns to the main screen
             backButton.Clicked += async (sender, args) =>
             {
                 await Navigation.PushModalAsync(new MainPage());
