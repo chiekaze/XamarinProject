@@ -23598,19 +23598,19 @@
     "UAP,Version=v10.0.10586": []
   },
   "packageFolders": {
-    "C:\\Users\\juhovai\\.nuget\\packages\\": {}
+    "C:\\Users\\chiki\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\juhovai\\Documents\\XamarinProject\\XamarinProject\\XamarinProject.UWP\\XamarinProject.UWP.csproj",
+      "projectUniqueName": "D:\\Programming\\XamarinProject\\XamarinProject\\XamarinProject.UWP\\XamarinProject.UWP.csproj",
       "projectName": "XamarinProject.UWP",
-      "projectPath": "C:\\Users\\juhovai\\Documents\\XamarinProject\\XamarinProject\\XamarinProject.UWP\\XamarinProject.UWP.csproj",
-      "projectJsonPath": "C:\\Users\\juhovai\\Documents\\XamarinProject\\XamarinProject\\XamarinProject.UWP\\project.json",
-      "packagesPath": "C:\\Users\\juhovai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juhovai\\Documents\\XamarinProject\\XamarinProject\\XamarinProject.UWP\\obj\\",
+      "projectPath": "D:\\Programming\\XamarinProject\\XamarinProject\\XamarinProject.UWP\\XamarinProject.UWP.csproj",
+      "projectJsonPath": "D:\\Programming\\XamarinProject\\XamarinProject\\XamarinProject.UWP\\project.json",
+      "packagesPath": "C:\\Users\\chiki\\.nuget\\packages\\",
+      "outputPath": "D:\\Programming\\XamarinProject\\XamarinProject\\XamarinProject.UWP\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
-        "C:\\Users\\juhovai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\chiki\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "sources": {

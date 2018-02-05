@@ -19,12 +19,15 @@ namespace XamarinProject.Data
 
         public int GetSize()
         {
-            if(database.Table<TTask>() == null)
+            if(database.Table<TTask>().Count() == 0)
             {
                 return 0;
             }
+
             else
+            {
                 return database.Table<TTask>().Count();
+            }        
         }
 
         public TTask GetTask()
@@ -73,21 +76,11 @@ namespace XamarinProject.Data
             }
         }
 
-        private void UpdateTasks()
-        {
-            for(int i = database.Table<TTask>().First().Id; i < database.Table<TTask>().First().Id + database.Table<TTask>().Count(); i++)
-            {
-                database.Table<TTask>().ElementAt(i - database.Table<TTask>().First().Id).Id = i - database.Table<TTask>().First().Id;
-            }
-        }
-
         public int DeleteTask(int id)
         {
             lock(locker)
             {
-                UpdateTasks();
                 return database.Delete<TTask>(id);
-                //return database.Table<TTask>().Delete(); //fuggin helll
             }
         }
     }

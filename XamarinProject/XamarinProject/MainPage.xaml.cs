@@ -14,8 +14,10 @@ namespace XamarinProject
 		{  
             InitializeComponent();
      
+            // Get task DB size
             int count = App.TaskDatabase.GetSize();
 
+            // Create arrays for tasks and checkboxes
             Label[] taskArray = new Label[count];
             Button[] buttonArray = new Button[count];
 
@@ -25,8 +27,10 @@ namespace XamarinProject
                 TTask t = App.TaskDatabase.GetTask(i);
                 taskArray[i] = new Label { Text = t.Task, HorizontalOptions = LayoutOptions.CenterAndExpand };
 
+                // Get the task id for the button
+                int id = t.Id;
                 // Create checkboxes
-                buttonArray[i] = new Button { Image = "Assets/CheckBoxEmptySmall.png", HorizontalOptions = LayoutOptions.Start, Text = (i + 1).ToString() };
+                buttonArray[i] = new Button { Image = "Assets/CheckBoxEmptySmall.png", HorizontalOptions = LayoutOptions.Start, ClassId = id.ToString() };
                 buttonArray[i].Clicked += OnChecked;
 
                 layout.Children.Add(taskArray[i]);
@@ -40,11 +44,12 @@ namespace XamarinProject
 		}
 
         public void OnChecked(object sender, EventArgs args)
-        {            
+        {   
             Button button = (Button)sender;
-            int id = Int32.Parse(button.Text);
+            int id = Int32.Parse(button.ClassId);
             button.Image = "Assets/CheckBoxSmall.png";
             App.TaskDatabase.DeleteTask(id);
+            Navigation.PushModalAsync(new MainPage());
         }
     }
 }
