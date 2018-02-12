@@ -3,28 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinProject.AddingTask">
     <ContentPage.Content>
-        <StackLayout x:Name="layout" BackgroundColor="LightSkyBlue">
+        <RelativeLayout x:Name="relativeLayout" 
+                        BackgroundColor="DarkGray">
             <Label Text="ADD TASK"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Label x:Name="taskName"
-                   VerticalOptions="CenterAndExpand" 
-                   HorizontalOptions="CenterAndExpand" />
+                   Font="Large"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                    Property=Height,Factor=0.5,Constant=-100}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                    Property=Width,Factor=0.5,Constant=-70}"/>
             <Entry x:Name="taskEntry" 
-                Placeholder="Enter a task"
+                   Placeholder="Enter a task"
                    BackgroundColor="LightGray"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                    Property=Height,Factor=0.5,Constant=-50}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                    Property=Width,Factor=0.5,Constant=-45}"/>
             <Button x:Name="saveButton"
-                Text="Save"
+                    Text="Save"
                     BackgroundColor="LightGray"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                    Property=Height,Factor=0.5,Constant=5}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                    Property=Width,Factor=0.5,Constant=-60}"/>
             <Button x:Name="backButton"
-                Text="Back"
+                    Text="Back"
                     BackgroundColor="LightGray"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"  />
-        </StackLayout>
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                    Property=Height,Factor=0.5,Constant=5}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                    Property=Width,Factor=0.5,Constant=20}"/>
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

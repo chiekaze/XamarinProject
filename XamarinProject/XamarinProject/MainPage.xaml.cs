@@ -20,7 +20,7 @@ namespace XamarinProject
             // Create arrays for tasks and checkboxes
             Label[] taskArray = new Label[count];
             Button[] buttonArray = new Button[count];
-
+            
             for (int i = 0; i < count; i++)
             {
                 // Create task array
@@ -30,7 +30,7 @@ namespace XamarinProject
                 // Get the task id for the button
                 int id = t.Id;
                 // Create checkboxes
-                buttonArray[i] = new Button { /*Image = "Assets/CheckBoxEmptySmall.png"*/ BackgroundColor = Color.LightGray,Text = "Done", TextColor = Color.Green, HorizontalOptions = LayoutOptions.Start, ClassId = id.ToString() };
+                buttonArray[i] = new Button { BackgroundColor = Color.LightGray,Text = "Done", TextColor = Color.Green, HorizontalOptions = LayoutOptions.Center, ClassId = id.ToString() };
                 buttonArray[i].Clicked += OnChecked;
 
                 stackLayout.Children.Add(taskArray[i]);
