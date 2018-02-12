@@ -17,6 +17,10 @@ namespace XamarinProject
 		{
 			InitializeComponent ();
 
+            Label newLabel = new Label();
+            newLabel.Text = "Error: Too many tasks! (Finish the old ones first!)";
+            newLabel.TextColor = Color.Red;
+
             // Creates new task, saves it in the database and returns to main screen
             saveButton.Clicked += async (sender, args) =>
             {  
@@ -26,9 +30,16 @@ namespace XamarinProject
                 }
                 else
                 {
-                    TTask task = new TTask(taskEntry.Text);
-                    App.TaskDatabase.SaveTask(task);
-                    await Navigation.PushModalAsync(new MainPage());
+                    if(App.TaskDatabase.GetSize() < 10)
+                    {
+                        TTask task = new TTask(taskEntry.Text);
+                        App.TaskDatabase.SaveTask(task);
+                        await Navigation.PushModalAsync(new MainPage());
+                    }
+                    else
+                    {
+                        layout.Children.Add(newLabel);
+                    }
                 }
             };
 

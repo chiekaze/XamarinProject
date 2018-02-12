@@ -30,7 +30,7 @@ namespace XamarinProject
                 // Get the task id for the button
                 int id = t.Id;
                 // Create checkboxes
-                buttonArray[i] = new Button { Image = "Assets/CheckBoxEmptySmall.png", HorizontalOptions = LayoutOptions.Start, ClassId = id.ToString() };
+                buttonArray[i] = new Button { /*Image = "Assets/CheckBoxEmptySmall.png"*/ BackgroundColor = Color.LightGray,Text = "Done", TextColor = Color.Green, HorizontalOptions = LayoutOptions.Start, ClassId = id.ToString() };
                 buttonArray[i].Clicked += OnChecked;
 
                 layout.Children.Add(taskArray[i]);
@@ -47,7 +47,7 @@ namespace XamarinProject
         {   
             Button button = (Button)sender;
             int id = Int32.Parse(button.ClassId);
-            button.Image = "Assets/CheckBoxSmall.png";
+            //button.Image = "Assets/CheckBoxSmall.png";
             App.TaskDatabase.DeleteTask(id);
             Navigation.PushModalAsync(new MainPage());
         }

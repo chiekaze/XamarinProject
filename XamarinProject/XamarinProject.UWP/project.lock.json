@@ -23598,19 +23598,19 @@
     "UAP,Version=v10.0.10586": []
   },
   "packageFolders": {
-    "C:\\Users\\chiki\\.nuget\\packages\\": {}
+    "C:\\Users\\KimKar\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "D:\\Programming\\XamarinProject\\XamarinProject\\XamarinProject.UWP\\XamarinProject.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\KimKar\\Desktop\\fer faks sake\\XamarinProject\\XamarinProject\\XamarinProject.UWP\\XamarinProject.UWP.csproj",
       "projectName": "XamarinProject.UWP",
-      "projectPath": "D:\\Programming\\XamarinProject\\XamarinProject\\XamarinProject.UWP\\XamarinProject.UWP.csproj",
-      "projectJsonPath": "D:\\Programming\\XamarinProject\\XamarinProject\\XamarinProject.UWP\\project.json",
-      "packagesPath": "C:\\Users\\chiki\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\XamarinProject\\XamarinProject\\XamarinProject.UWP\\obj\\",
+      "projectPath": "C:\\Users\\KimKar\\Desktop\\fer faks sake\\XamarinProject\\XamarinProject\\XamarinProject.UWP\\XamarinProject.UWP.csproj",
+      "projectJsonPath": "C:\\Users\\KimKar\\Desktop\\fer faks sake\\XamarinProject\\XamarinProject\\XamarinProject.UWP\\project.json",
+      "packagesPath": "C:\\Users\\KimKar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\KimKar\\Desktop\\fer faks sake\\XamarinProject\\XamarinProject\\XamarinProject.UWP\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
-        "C:\\Users\\chiki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\KimKar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "sources": {
