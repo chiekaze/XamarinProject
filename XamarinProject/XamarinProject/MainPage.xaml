@@ -4,22 +4,28 @@
              xmlns:local="clr-namespace:XamarinProject"
              x:Class="XamarinProject.MainPage">
     <ContentPage.Content>
-        <StackLayout x:Name="layout" BackgroundColor="LightSkyBlue">
-            <Label x:Name="label"
-                Text="TASK LIST"
-                Font="Large"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-            Property=Height,Factor=.15,Constant=0}"/>
+        <RelativeLayout x:Name="relativeLayout"
+                        BackgroundColor="DarkGray">
+            <Label  x:Name="label"
+                    Text="TASK LIST"
+                    Font="Large"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                            Property=Height,Factor=0.15,Constant=0}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                            Property=Width,Factor=0.5,Constant=-70}"/>
             <Button x:Name="addTask"
                     Text="Add"
                     BackgroundColor="LightGray"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="Center"
-                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-            Property=Height,Factor=.20,Constant=0}"/>
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=.20,Constant=5}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.5,Constant=-22}"/>
+            <StackLayout x:Name="stackLayout"
+                         VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.5,Constant=-150}"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                Property=Width,Factor=0.5,Constant=-30}">
+            </StackLayout>
+        </RelativeLayout>
 
-        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

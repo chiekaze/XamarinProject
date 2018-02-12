@@ -33,8 +33,8 @@ namespace XamarinProject
                 buttonArray[i] = new Button { /*Image = "Assets/CheckBoxEmptySmall.png"*/ BackgroundColor = Color.LightGray,Text = "Done", TextColor = Color.Green, HorizontalOptions = LayoutOptions.Start, ClassId = id.ToString() };
                 buttonArray[i].Clicked += OnChecked;
 
-                layout.Children.Add(taskArray[i]);
-                layout.Children.Add(buttonArray[i]);
+                stackLayout.Children.Add(taskArray[i]);
+                stackLayout.Children.Add(buttonArray[i]);
             }
  
             addTask.Clicked += async (sender, args) =>
