@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.ApplicationModel.Core;
 using Xamarin.Forms;
 using XamarinProject.Data;
 
@@ -25,12 +26,12 @@ namespace XamarinProject
             {
                 // Create task array
                 TTask t = App.TaskDatabase.GetTask(i);
-                taskArray[i] = new Label { Text = t.Task, HorizontalOptions = LayoutOptions.CenterAndExpand };
+                taskArray[i] = new Label { TextColor = Color.DarkSlateBlue, Text = t.Task, HorizontalOptions = LayoutOptions.CenterAndExpand };
 
                 // Get the task id for the button
                 int id = t.Id;
                 // Create checkboxes
-                buttonArray[i] = new Button { BackgroundColor = Color.LightGray,Text = "Done", TextColor = Color.Green, HorizontalOptions = LayoutOptions.Center, ClassId = id.ToString() };
+                buttonArray[i] = new Button { BackgroundColor = Color.Green, Text = "Done", TextColor = Color.White, HorizontalOptions = LayoutOptions.Center, ClassId = id.ToString() };
                 buttonArray[i].Clicked += OnChecked;
 
                 stackLayout.Children.Add(taskArray[i]);
@@ -41,6 +42,8 @@ namespace XamarinProject
             {
                 await Navigation.PushModalAsync(new AddingTask());
             };
+
+            exitButton.Clicked += ExitApp;
 		}
 
         public void OnChecked(object sender, EventArgs args)
@@ -50,6 +53,11 @@ namespace XamarinProject
             //button.Image = "Assets/CheckBoxSmall.png";
             App.TaskDatabase.DeleteTask(id);
             Navigation.PushModalAsync(new MainPage());
+        }
+
+        public void ExitApp(object sender, EventArgs args)
+        {
+            CoreApplication.Exit();
         }
     }
 }

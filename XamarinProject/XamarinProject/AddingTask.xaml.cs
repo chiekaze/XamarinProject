@@ -30,7 +30,7 @@ namespace XamarinProject
                 }
                 else
                 {
-                    if(App.TaskDatabase.GetSize() < 10)
+                    if(App.TaskDatabase.GetSize() < 8)
                     {
                         TTask task = new TTask(taskEntry.Text);
                         App.TaskDatabase.SaveTask(task);
@@ -40,7 +40,7 @@ namespace XamarinProject
                     {
                         //relativeLayout.Children.Add(newLabel);
                         relativeLayout.Children.Add
-                (newLabel, Constraint.RelativeToParent((parent) =>
+                 (newLabel, Constraint.RelativeToParent((parent) =>
                 { return (parent.Width - newLabel.Width) / 2; }),
                   Constraint.Constant(0)
                 );

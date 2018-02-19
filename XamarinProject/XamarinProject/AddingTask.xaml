@@ -4,34 +4,59 @@
              x:Class="XamarinProject.AddingTask">
     <ContentPage.Content>
         <RelativeLayout x:Name="relativeLayout" 
-                        BackgroundColor="DarkGray">
-            <Label Text="ADD TASK"
-                   Font="Large"
+                        BackgroundColor="LightSteelBlue"
+                        Padding="0">
+            
+            <BoxView BackgroundColor="DarkSlateBlue"  
+                     HeightRequest="200"
+                     WidthRequest="133337"
+                     HorizontalOptions="Fill"/>
+
+            <BoxView BackgroundColor="White"  
+                     HeightRequest="20"
+                     WidthRequest="133337"
+                     HorizontalOptions="Fill"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                    Property=Height,Factor=0.0,Constant=200}"/>
+
+            <Label Text="Add Task"
+                   TextColor="White"
+                    Font="60"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                    Property=Height,Factor=0.0,Constant=20}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                    Property=Width,Factor=0.0,Constant=20}"/>
+            <Label Text="Task:"
+                   TextColor="DarkSlateBlue"
+                   Font="30"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                    Property=Height,Factor=0.5,Constant=-100}"
+                                                    Property=Height,Factor=0.5,Constant=-175}"
                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                    Property=Width,Factor=0.5,Constant=-70}"/>
+                                                    Property=Width,Factor=0.0,Constant=20}"/>
             <Entry x:Name="taskEntry" 
                    Placeholder="Enter a task"
-                   BackgroundColor="LightGray"
+                   WidthRequest="300"
+                   BackgroundColor="LightSteelBlue"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, 
-                                                    Property=Height,Factor=0.5,Constant=-50}"
+                                                    Property=Height,Factor=0.5,Constant=-125}"
                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
-                                                    Property=Width,Factor=0.5,Constant=-45}"/>
+                                                    Property=Width,Factor=0.0,Constant=20}"/>
             <Button x:Name="saveButton"
                     Text="Save"
-                    BackgroundColor="LightGray"
+                    TextColor="White"
+                    BackgroundColor="Green"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, 
-                                                    Property=Height,Factor=0.5,Constant=5}"
+                                                    Property=Height,Factor=0.5,Constant=-80}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
-                                                    Property=Width,Factor=0.5,Constant=-60}"/>
+                                                    Property=Width,Factor=0.0,Constant=20}"/>
             <Button x:Name="backButton"
                     Text="Back"
-                    BackgroundColor="LightGray"
+                    TextColor="DarkSlateBlue"
+                    BackgroundColor="PaleVioletRed"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, 
-                                                    Property=Height,Factor=0.5,Constant=5}"
+                                                    Property=Height,Factor=0.5,Constant=-80}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
-                                                    Property=Width,Factor=0.5,Constant=20}"/>
+                                                    Property=Width,Factor=0.0,Constant=90}"/>
         </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>
